@@ -1,16 +1,15 @@
+import { ProfileMenu } from "..";
+
 const Navbar = () => {
   return (
     <div className="flex flex-shrink-0 transition-all">
       <div className="fixed inset-0 z-10 bg-black bg-opacity-50 lg:hidden"></div>
       <div className="fixed inset-y-0 z-10 w-16 bg-white"></div>
-
       <nav
         aria-label="Options"
         className="fixed inset-x-0 bottom-0 flex flex-row-reverse items-center justify-between px-4 py-2 bg-white border-t border-indigo-100 sm:hidden shadow-t rounded-t-3xl"
       >
-        <button
-          className="p-2 transition-colors rounded-lg shadow-md hover:bg-indigo-800 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-white focus:ring-offset-2"
-        >
+        <button className="p-2 transition-colors rounded-lg shadow-md hover:bg-indigo-800 hover:text-white focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-white focus:ring-offset-2">
           <span className="sr-only">Toggle sidebar</span>
           <svg
             aria-hidden="true"
@@ -150,50 +149,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div
-          className="relative flex items-center flex-shrink-0 p-2"
-          x-data="{ isOpen: false }"
-        >
-          <button className="transition-opacity rounded-lg opacity-80 hover:opacity-100 focus:outline-none focus:ring focus:ring-indigo-600 focus:ring-offset-white focus:ring-offset-2">
-            <img
-              className="w-10 h-10 rounded-lg shadow-md"
-              src="https://avatars.githubusercontent.com/u/57622665?s=460&u=8f581f4c4acd4c18c33a87b3e6476112325e8b38&v=4"
-              alt="Ahmed Kamel"
-            />
-            <span className="sr-only">User menu</span>
-          </button>
-          <div
-            tabIndex="-1"
-            className="absolute w-48 py-1 mt-2 origin-bottom-left bg-white rounded-md shadow-lg left-10 bottom-14 focus:outline-none"
-            role="menu"
-            aria-orientation="vertical"
-            aria-label="user menu"
-          >
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              role="menuitem"
-            >
-              Your Profile
-            </a>
-
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              role="menuitem"
-            >
-              Settings
-            </a>
-
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              role="menuitem"
-            >
-              Sign out
-            </a>
-          </div>
-        </div>
+        <ProfileMenu />
       </nav>
 
       <div className="fixed inset-y-0 left-0 z-10 flex-shrink-0 w-64 bg-white border-r-2 border-indigo-100 shadow-lg sm:left-16 rounded-tr-3xl rounded-br-3xl sm:w-72 lg:static lg:w-64">
