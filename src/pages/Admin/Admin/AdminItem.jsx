@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DeleteModal, EditModal } from "../../components/Admin";
+import { DeleteModal, EditModal } from "../../../components/Admin";
 
 const AdminItem = ({ id, username, email, access }) => {
   const [openAdminDeleteModal, setOpenAdminDeleteModal] = useState(false);

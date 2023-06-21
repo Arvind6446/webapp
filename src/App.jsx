@@ -1,4 +1,4 @@
-import { Admin } from "./pages/Admin";
+import { Admin } from "./pages/Admin/Admin";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { db } from "../../utils/firebase";
+import { db } from "../../../utils/firebase";
 import { collection, onSnapshot, query } from "firebase/firestore";
-import { AddModal } from "../../components/Admin";
+import { AddModal } from "../../../components/Admin";
 import AdminItem from "./AdminItem";
 
 const Admin = () => {
