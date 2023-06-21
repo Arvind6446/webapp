@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ProfileMenu = () => {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -32,13 +33,13 @@ const ProfileMenu = () => {
           >
             Settings
           </a>
-          <a
-            href="#"
+          <Link
+            to="/auth/signin"
             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
             role="menuitem"
           >
             Sign out
-          </a>
+          </Link>
         </div>
       )}
     </div>
